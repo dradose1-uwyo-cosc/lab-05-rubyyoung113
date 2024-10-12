@@ -1,12 +1,11 @@
-# Your Name Here
+# Ruby Young 
 # UWYO COSC 1010
-# Submission Date
+# 16/10/24
 # Lab 03 
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Lab Section: 16 
+# Sources, people worked with, help given to: Help from Eugenia Ceinos 
+
+
 
 max_temps = [
     32, 24, 22, 25, 37, 33, 34, 40, 40, 42,
@@ -95,8 +94,20 @@ min_temps = [
 # The use of len() is fine
 # You can do this in two individual loops, or a single loop if you wish 
 
+max_temp = 0 
+for number in max_temps:
+    if number > max_temp: 
+        max_temp = number
 print(f"Max temp = {max_temp}")
+
+
+min_temp = 0 
+for number in min_temps: 
+    if number < min_temp: 
+        min_temp = number 
 print(f"Min temp = {min_temp}")
+
+
 
 # Given the below list 
 numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, -25, 3, -10, -83, 63, 0, 13, -99, 87, -46, -88, -71, 4, -99, -15, -12, 72, -1, -20, -90, 32, -36, -59, 83, 78, 52, 43, 55, 12, 16, -37, -5, -98, -53]
@@ -104,11 +115,42 @@ numbers = [-61, -76, 94, 21, 97, -4, 21, 56, -26, 9, 100, 56, -7, -32, 60, -68, 
 # You should print the number and the result within an f-string 
 # Example output: 83 is positive
 
-print(f'There are {pos_count} positive numbers')
-print(f'There are {neg_count} negative numbers')
-print(f"Zero occurred {zero_count} time(s)")
+
+
+pos_count = 0 
+for number in numbers: 
+    if number > 0:
+        pos_count += 1 
+print(f"There are {pos_count} positive numbers")
+
+
+neg_count = 0 
+for number in numbers: 
+    if number < 0:
+        neg_count += 1 
+print(f"There are {neg_count} negative numbers")
+
+
+zero_count = 0 
+for number in numbers: 
+    if number == 0:
+        zero_count += 1 
+print(f"Zero occurred {zero_count} time")  
+
+
+
+
+
 # Given the same numbers list, give the sum of all positive numbers, and the sum of all negative numbers
 # This should be done within a single loop
 
+pos_sum = 0
+neg_sum = 0 
+for n in numbers: 
+    if n > 0: 
+        pos_sum += n
+    elif n < 0:
+        neg_sum += n 
 print(f"Sum of positive numbers {pos_sum}")
 print(f"Sum of negative numbers {neg_sum}")
+
